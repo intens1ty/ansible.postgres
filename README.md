@@ -15,7 +15,7 @@ cd ansible.postgresql
 ```
 
 ### 2. Change, or add the desired variables:
-* roles/postgreql/vars/main.yml
+* roles/postgresql/vars/main.yml
 
 Default values:
 * postgresql version - 12
