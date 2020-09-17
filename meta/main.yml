@@ -4,7 +4,7 @@ galaxy_info:
   company: your company (optional)
 
   # If the issue tracker for your role is not on github, uncomment the
-  # next line and provide a value
+  # next line and provide a valu
   # issue_tracker_url: http://example.com/issue/tracker
 
   # Choose a valid license ID from https://spdx.org - some suggested licenses:
@@ -50,4 +50,3 @@ galaxy_info:
 dependencies: []
   # List your role dependencies here, one per line. Be sure to remove the '[]' above,
   # if you add dependencies to this list.
-  

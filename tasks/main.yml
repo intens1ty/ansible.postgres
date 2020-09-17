@@ -2,18 +2,15 @@
 - name: Install repository
   yum:
     name: "{{ item }}"
-  with_items: "{{ repository }}"
+  update_cache: true
+  with_items: "{{ rh7_repository }}"
 
 - name: Install postgresql
   yum:
     name: "{{ item }}"
+  state: present
   with_items: "{{ packages }}"
 
-- name: initdb
+- name: Initialize the database
   command: /usr/pgsql-{{ postgresql_version }}/bin/postgresql-{{ postgresql_version }}-setup initdb
-
-- name: Start postgres
-  service:
-    name: postgresql-{{ postgresql_version }}
-    state: started
-    enabled: yes 
+  notify: Restart postgresql

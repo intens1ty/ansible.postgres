@@ -1,0 +1,10 @@
+---
+postgresql_version: 9.6
+postgresql_version_terse: "{{ postgresql_version | replace('.', '') }}"
+postgresql_minor_version: 9.6.16 
+
+rh7_repository: https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
+
+packages:
+  - postgresql{{ postgresql_version_terse }}
+  - postgresql{{ postgresql_version_terse }}-server
